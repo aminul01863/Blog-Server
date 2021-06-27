@@ -17,7 +17,7 @@ const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology:
 client.connect(err => {
     const reviewCollection = client.db("BlogStore").collection("review");
     const adminCollection = client.db("BlogStore").collection("admin");
-    const blogsCollection = client.db("BlogStore").collection("blog");
+    const blogsCollection = client.db("BlogStore").collection("blogs");
     // perform actions on the collection object
     //review post
     app.post("/addReview", (req, res) => {
